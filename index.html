@@ -8,10 +8,12 @@
         <header class="main-header">
             <a class="logo header-logo">Device</a>
             <form class="search-form">
-                <input type="search" name="site-search" placeholder="Поиск по сайту">
+                <label class="search-icon" for="search" aria-label="Поиск по сайту"></label>
+                <input class="search" id="search" type="search" name="site-search" placeholder="Поиск по сайту">
+                <button class="btn btn-search" type="submit">Найти</button>
             </form>
             <ul class="header-user-action">
-                <li><a class="login-link" href="#">Войти</a></li>
+                <li><a class="login-link" href="info.html">Войти</a></li>
                 <li><a class="login-exit disabled" href="#">Выйти</a></li>
                 <li><a class="compare-goods" href="#">Сравнить</a></li>
                 <li><a class="user-cart" href="#">Корзина</a></li>
@@ -138,9 +140,9 @@
             <section class="slider-services">
                 <h2 class="visually-hidden">Сервисы магазина</h2>
                 <ul class="services-slider-switch">
-                    <li class="btn btn-service-name active">Доставка</li>
-                    <li class="btn btn-service-name">Гарантия</li>
-                    <li class="btn btn-service-name">Кредит</li>
+                    <li class="btn btn-service-name active" id="delivery">Доставка</li>
+                    <li class="btn btn-service-name" id="guarantee">Гарантия</li>
+                    <li class="btn btn-service-name" id="credit">Кредит</li>
                 </ul>
                 <ul class="services-slider-info">
                     <li class="service-info active">
@@ -162,16 +164,16 @@
                 <h2 class="visually-hidden">Производители</h2>
                 <ul>
                     <li class="producer-logo">
-                        <a href="#">Логотип DGI</a>
+                        <a href="#" aria-label="DGI">Логотип DGI</a>
                     </li>
                     <li class="producer-logo">
-                        <a href="#">Логотип SP Gadgents</a>
+                        <a href="#" aria-label="SP Gadgents">Логотип SP Gadgents</a>
                     </li>
                     <li class="producer-logo">
-                        <a href="#">Логотип Go Pro</a>
+                        <a href="#" aria-label="Go Pro">Логотип Go Pro</a>
                     </li>
                     <li class="producer-logo">
-                        <a href="#">Логотип Vive</a>
+                        <a href="#" aria-label="Vive">Логотип Vive</a>
                     </li>
                 </ul>
             </section>
@@ -193,7 +195,7 @@
                 <h2>Контакты</h2>
                 <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
                 <div class="map">
-                    <img src="img/map.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
+                    <img src="img/map.jpg" width="560" height="222" alt="Офис находится по адресу улица Строителей 15, Москва">
                 </div>
                 <a class="btn btn-message" href="#">Напишите нам</a>
             </section>
@@ -201,7 +203,7 @@
             <footer class="main-footer">
                 <a class="logo footer-logo">Device</a>
                 <ul class="footer-user-action">
-                    <li><a class="login-link" href="#">Войти</a></li>
+                    <li><a class="login-link" href="info.html">Войти</a></li>
                     <li><a class="compare-product" href="#">Сравнить</a></li>
                     <li><a class="user-cart" href="#">Корзина</a></li>
                 </ul>
@@ -244,14 +246,30 @@
             
             <section class="modal modal-message">
                 <h2 class="visually-hidden">Оставьте нам сообщение</h2>
-                <!--Место для формы-->
-                <span class="modal-close">&times;</span>
+                <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
+                    <p class="message-item-form">
+                        <label for="user-name">Ваше имя:</label>
+                        <input id="user-name"  type="text" name="user-name" placeholder="Представьтесь, пожалуйста">
+                    </p>
+                    <p class="message-item-form">
+                        <label for="user-email">Ваше e-mail:</label>
+                        <input id="user-email" type="text" name="user-email"  placeholder="Для отправки ответа">
+                    </p>
+                    <p class="message-item-form">
+                        <label for="user-message">Текст письма:</label>
+                        <textarea id="user-message" name="user-message" id="user-message" cols="93" rows="7" placeholder="В свободной форме"></textarea>
+                    </p>
+                    <button class="btn btn-message-submit" type="submit">Отправить</button>
+                </form>
+                <button class="modal-close" type="button" aria-label="Закрыть">&times;</button>
             </section>
             
             <section class="modal modal-map">
                 <h2 class="visually-hidden">Увеличенная карта</h2>
-                <!--Большая карта-->
-                <span class="modal-close">&times;</span>
+                <div class="modal-map">
+                    <img src="img/map-big.jpg" width="960" height="559" alt="Офис находится по адресу улица Строителей 15, Москва">
+                </div>
+                <button class="modal-close" type="button" aria-label="Закрыть">&times;</button>
             </section>
         </main>
     </body>
