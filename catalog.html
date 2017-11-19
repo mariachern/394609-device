@@ -3,14 +3,18 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Девайс</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="main-header">
-            <a class="logo header-logo" href="index.html">Device</a>
+            <a class="logo header-logo" href="index.html">
+                <img src="img/logo.svg" width="163" height="36" alt="Логотип Device">
+            </a>
             <form class="search-form">
                 <label class="search-icon" for="search" aria-label="Поиск по сайту"></label>
                 <input class="search" id="search" type="search" name="site-search" placeholder="Поиск по сайту">
-                <button class="btn btn-search" type="submit">Найти</button>
+                <button class="btn-search" type="submit">Найти</button>
             </form>
             <ul class="header-user-action">
                 <li><a class="login-link" href="info.html">Валентин Петухов</a></li>
@@ -39,7 +43,7 @@
         </header>
         
         <main class="container">
-            <h1>Моноподы для селфи</h1>
+            <h1 class="page-title ">Моноподы для селфи</h1>
             <ul class="breadcrumbs">
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="#">Каталог товаров</a></li>
@@ -57,34 +61,24 @@
                         <legend>Цвет</legend>
                         <ul>
                             <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" checked>
-                                    Черный
-                                </label>
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-black" type="checkbox" name="black" checked>
+                                <label for="filter-black">Черный</label>
                             </li>
                             <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black">
-                                    Белый
-                                </label>
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-white" type="checkbox" name="white">
+                                <label for="filter-white">Белый</label>
                             </li>
                             <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" checked>
-                                    Синий
-                                </label>
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-blue" type="checkbox" name="blue" checked>
+                                <label for="filter-blue">Синий</label>
                             </li>
                             <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" checked>
-                                    Красный
-                                </label>
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-red" type="checkbox" name="red" checked>
+                                <label for="filter-red">Красный</label>
                             </li>
                             <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black">
-                                    Розовый
-                                </label>
+                                <input class="visually-hidden filter-input filter-input-checkbox" id="filter-pink" type="checkbox" name="pink">
+                                <label for="filter-pink">Розовый</label>
                             </li>
                         </ul>
                     </fieldset>
@@ -92,16 +86,12 @@
                         <legend>Bluetooth</legend>
                         <ul>
                             <li class="filter-option">
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" value="yes">
-                                    Есть
-                                </label>
+                                <input class="visually-hidden filter-input filter-input-radio" id="filter-bth-yes" type="radio" name="bluetooth" value="yes" checked>
+                                <label for="filter-bth-yes">Есть</label>
                             </li>
                             <li>
-                                <label>
-                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="bluetooth" value="no">
-                                    Нет
-                                </label>
+                                <input class="visually-hidden filter-input filter-input-radio" id="filter-bth-no" type="radio" name="bluetooth" value="no">
+                                <label for="filter-bth-no">Нет</label>
                             </li>
                         </ul>
                     </fieldset>
@@ -134,10 +124,10 @@
                         <p class="catalog-item-img">
                             <img src="img/catalog/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                         </p>
-                        <p class="catalog-item-price">500 ₽</p>
+                        <p class="catalog-item-price">500 руб.</p>
                         <div class="catalog-item-actions">
                             <button class="btn btn-to-cart" type="button">В корзину</button>
-                            <button class="btn btn-to-compare" type="button">Добавить к сравнению</button>
+                            <button class="btn-to-compare" type="button">Добавить к сравнению</button>
                         </div>
                     </li>
                     <li class="catalog-item">
@@ -149,10 +139,10 @@
                         <p class="catalog-item-img">
                             <img src="img/catalog/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                         </p>
-                        <p class="catalog-item-price">1 500 ₽</p>
+                        <p class="catalog-item-price">1 500 руб.</p>
                         <div class="catalog-item-actions">
                             <button class="btn btn-to-cart" type="button">В корзину</button>
-                            <button class="btn btn-to-compare" type="button">Добавить к сравнению</button>
+                            <button class="btn-to-compare" type="button">Добавить к сравнению</button>
                         </div>
                     </li>
                     <li class="catalog-item">
@@ -164,10 +154,10 @@
                         <p class="catalog-item-img">
                             <img src="img/catalog/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                         </p>
-                        <p class="catalog-item-price">2 500 ₽</p>
+                        <p class="catalog-item-price">2 500 руб.</p>
                         <div class="catalog-item-actions">
                             <button class="btn btn-to-cart" type="button">В корзину</button>
-                            <button class="btn btn-to-compare" type="button">Добавить к сравнению</button>
+                            <button class="btn-to-compare" type="button">Добавить к сравнению</button>
                         </div>
                     </li>
                     <li class="catalog-item">
@@ -182,10 +172,10 @@
                         <div class="sticker">
                             <span>New</span>
                         </div>
-                        <p class="catalog-item-price">4 900 ₽</p>
+                        <p class="catalog-item-price">4 900 руб.</p>
                         <div class="catalog-item-actions">
                             <button class="btn btn-to-cart" type="button">В корзину</button>
-                            <button class="btn btn-to-compare" type="button">Добавить к сравнению</button>
+                            <button class="btn-to-compare" type="button">Добавить к сравнению</button>
                         </div>
                     </li>
                 </ul>
@@ -199,7 +189,9 @@
             </section>
             
             <footer class="main-footer">
-                <a class="logo footer-logo" href="index.html">Device</a>
+                <a class="logo footer-logo" href="index.html">
+                    <img src="img/logo-footer.svg" width="163" height="36" alt="Логотип Device">
+                </a>
                 <ul class="footer-user-action">
                     <li><a class="login-link" href="info.html">Войти</a></li>
                     <li><a class="compare-product" href="#">Сравнить</a></li>
@@ -236,7 +228,7 @@
                     </ul>
                 </div>
                 <p class="footer-copyright">
-                    <a class="btn" href="https://htmlacademy.ru/intensive/htmlcss">
+                    <a href="https://htmlacademy.ru/intensive/htmlcss">
                         <svg width="26.943" height="34.09" viewBox="0 0 26.943 34.09"><path fill="#FFC600" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/></svg>
                     </a>
                 </p>
