@@ -30,13 +30,11 @@
 <defs>
     <style>
       .cls-1 {
-        font-size: 48px;
-        text-anchor: middle;
+        font-size: 26.459px;
         font-family: Gilroy;
         font-weight: 800;
-        text-transform: uppercase;
       }
     </style>
   </defs>
-  <text id="logo" class="cls-1" x="80.876" y="35.24"><tspan x="80.876">DEVICE</tspan></text>
+  <text id="logo" class="cls-1" transform="translate(-3.32 34.511) scale(1.827 1.814)">DEVICE</text>
 </svg>
