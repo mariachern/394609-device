@@ -20,31 +20,36 @@
                             <button class="btn-search" type="submit">Найти</button>
                         </form>
                         <ul class="header-user-action">
-                            <li><a class="login-link" href="info.html">Войти</a></li>
-                            <li><a class="login-exit disabled" href="#">Выйти</a></li>
+                            <div class="user-block">
+                                <li><a class="login-link" href="info.html">Войти</a></li>
+                                <li><a class="login-exit disabled" href="#">Выйти</a></li>
+                            </div>
+                            <div class="goods-block">
                             <li><a class="compare-goods" href="#">Сравнить</a></li>
                             <li><a class="user-cart" href="#">Корзина</a></li>
+                            </div>
                         </ul>
                     </div>
                     <nav class="main-nav">
                         <ul class="desktop-menu">
                             <li class="menu-item">
-                                <div class="one-part-nav-wrapper">
-                                    <a class="menu-item" href="#">Каталог товаров</a>
+                                <div class="one-part-nav">
+                                    <a class="menu-item open-submenu" href="#">Каталог товаров</a>
                                     <ul class="submenu-catalog">
                                         <li><a href="#">Виртуальная реальность</a></li>
                                         <li><a href="#">Моноподы для селфи</a></li>
                                         <li><a href="#">Экшн-камеры</a></li>
                                         <li><a href="#">Финтес-браслеты</a></li>
                                         <li><a href="#">Умные часы</a></li>
-                                        <li><a href="#"></a></li>
                                         <li><a href="#">Квадрокоптеры</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <div class="other-part-nav-wrapper">
-                                <li><a class="menu-item" href="#">Доставка</a></li>
-                                <li><a class="menu-item" href="#">Гарантия</a></li>
+                            <div class="two-part-nav">
+                                <div class="services-block">
+                                    <li><a class="menu-item" href="#">Доставка</a></li>
+                                    <li><a class="menu-item" href="#">Гарантия</a></li>
+                                </div>
                                 <li><a class="menu-item" href="#">Контакты</a></li>
                             </div>
                         </ul>
@@ -53,81 +58,93 @@
             </div>
         </header>
         
-        <main class="container">            
-            <section class="slider-goods-preview">
+        <main>            
+            <div class="container">
+            <section class="slider">
                 <h1 class="visually-hidden">Магазин «Device»</h1>
-                <ul class="slidewrapper">
-                    <li class="slide active">
-                        <img class="slide-img" src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
+                <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+                <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+                <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+                <div class="slider-controls">
+                    <label class="slider-controls-item" for="product-1">Первый</label>
+                    <label class="slider-controls-item" for="product-2">Второй</label>
+                    <label class="slider-controls-item" for="product-3">Третий</label>
+                </div>
+                <ul class="slider-list">
+                    <li class="slide" id="slide-1">
+                        <div class="img-wrapper">
+                            <img class="slide-img" src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
+                        </div>
                         <div class="slide-item-info">
                             <span class="slide-number">01</span>
                             <b class="slide-title">Делай селфи,<br>как Бен Стиллер!</b>
                             <p class="slide-text">Самая длинная палка для селфи доступна в нашем магазине.
                             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                            <a class="btn btn-more-info" href="#">Подробнее</a>
+                            <a class="btn slide-btn" href="#">Подробнее</a>
                             <table class="slide-table">
                                 <caption class="visually-hidden">Характеристики товара</caption>
-                                <tr>
-                                    <th>Длина палки</th>
-                                    <th>Вес палки</th>
-                                    <th>Материал</th>
-                                </tr>
                                 <tr>
                                     <td>8,5 м</td>
                                     <td>5 кг</td>
                                     <td>Карбон</td>
                                 </tr>
+                                <tr>
+                                    <th>Длина палки</th>
+                                    <th>Вес палки</th>
+                                    <th>Материал</th>
+                                </tr>
                             </table>
                         </div>
                     </li>
-                    <li class="slide">
-                        <img class="slide-img" src="img/slider-2.png" width="345" height="485" alt="Фитес-браслет">
+                    <li class="slide" id="slide-2">
+                        <div class="img-wrapper">
+                            <img class="slide-img" src="img/slider-2.png" width="345" height="485" alt="Фитес-браслет">
+                        </div>
                         <div class="slide-item-info">
                             <span class="slide-number">02</span>
                             <b class="slide-title">Худеем
                             <br>правильно!</b>
                             <p class="slide-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                            <a class="btn btn-more-info" href="#">Подробнее</a>
+                            <a class="btn slide-btn" href="#">Подробнее</a>
                             <table class="slide-table">
                                 <caption class="visually-hidden">Характеристики товара</caption>
                                 <tr>
-                                    <th>Без подзарядки</th>
+                                    <td>48 часов</td>
                                 </tr>
                                 <tr>
-                                    <td>48 часов</td>
+                                    <th>Без подзарядки</th>
                                 </tr>
                             </table>
                         </div>
                     </li>
-                    <li class="slide">
-                        <img class="slide-img" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+                    <li class="slide" id="slide-3">
+                        <div class="img-wrapper">
+                            <img class="slide-img" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+                        </div>
                         <div class="slide-item-info">
                             <span class="slide-number">03</span>
                             <b class="slide-title">Порхает как бабочка,<br>жалит как пчела!</b>
                             <p class="slide-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                            <a class="btn btn-more-info" href="#">Подробнее</a>
+                            <a class="btn slide-btn" href="#">Подробнее</a>
                             <table class="slide-table">
                                 <caption class="visually-hidden">Характеристики товара</caption>
                                 <tr>
-                                    <th>Дальность полета</th>
-                                    <th>Радиус поражения</th>
-                                </tr>
-                                <tr>
                                     <td>800 м</td>
                                     <td>50 м</td>
+                                </tr>
+                                <tr>
+                                    <th>Дальность полета</th>
+                                    <th>Радиус поражения</th>
                                 </tr>
                             </table>
                         </div>
                     </li>
                 </ul>
-                <div class="preview-slider-switch">
-                    <span class="circle-switch active"></span>
-                    <span class="circle-switch"></span>
-                    <span class="circle-switch"></span>
-                </div>
             </section>
+            </div>
             
-            <section class="catalog-sections">
+            <div class="container">
+                <section class="catalog-sections">
                 <h2 class="visually-hidden">Разделы каталога товаров</h2>
                 <ul class="list-sections">
                     <li class="catalog-section">
@@ -174,42 +191,49 @@
                     </li>
                 </ul>
             </section>
+            </div>
             
             <section class="slider-services">
+                <div class="container">
+                    <div class="slider-services-wrapper">
                 <h2 class="visually-hidden">Сервисы магазина</h2>
-                <div class="slider-services-wrapper">
-                    <ul class="services-slider-switch">
-                        <li><a class="btn btn-service-name active" id="delivery" href="#">Доставка</a></li>
-                        <li><a class="btn btn-service-name" id="guarantee" href="#">Гарантия</a></li>
-                        <li><a class="btn btn-service-name" id="credit" href="#">Кредит</a></li>
-                    </ul>
-                    <ul class="services-slider-info">
-                        <li class="service-info active">
-                            <div class="service-info-content">
+                <input class="visually-hidden" type="radio" id="service-1" name="toggle-1" checked>
+                <input class="visually-hidden" type="radio" id="service-2" name="toggle-1">
+                <input class="visually-hidden" type="radio" id="service-3" name="toggle-1">
+                <div class="slider-services-controls">
+                    <label class="btn btn-service" for="service-1">Доставка</label>
+                    <label class="btn btn-service" for="service-2">Гарантия</label>
+                    <label class="btn btn-service" for="service-3">Кредит</label>
+                </div>
+                <ul class="slider-services-list">
+                    <li class="service-slide" id="service-slide-1">
+                            <div class="service-slide-content">
                                 <h3>Доставка</h3>
                                 <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
                             </div>
                             <p class="service-icon delivery-icon"></p>
                         </li>
-                        <li class="service-info">
-                            <div class="service-info-content">
+                    <li class="service-slide" id="service-slide-2">
+                            <div class="service-slide-content">
                                 <h3>Гарантия</h3>
                                 <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
                             </div>
                             <p class="service-icon warranty-icon"></p>
                         </li>
-                        <li class="service-info">
-                            <div class="service-info-content">
+                    <li class="service-slide" id="service-slide-3">
+                            <div class="service-slide-content">
                                 <h3>Кредит</h3>
                                 <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
                             </div>
                             <p class="service-icon credit-icon"></p>
                         </li>
-                    </ul>
+                </ul>
+                </div>
                 </div>
             </section>
             
-            <section class="producers-logo">
+            <div class="container">
+                <section class="producers-logo">
                 <h2 class="visually-hidden">Производители</h2>
                 <ul class="producers-list">
                     <li class="producer-logo">
@@ -226,7 +250,9 @@
                     </li>
                 </ul>
             </section>
-            
+            </div>
+                
+            <div class="container">
             <div class="index-columns">
                 <section class="about-us">
                     <h2>О нас</h2>
@@ -237,7 +263,7 @@
                         <li>Автотрейдинг</li>
                         <li>ЖелДорЭкспедиция</li>
                     </ul>
-                    <a class="btn btn-more-about-us" href="#">Подробнее о нас</a>
+                    <a class="btn about-us-btn" href="#">Подробнее о нас</a>
                 </section>
 
                 <section class="contacts">
@@ -246,8 +272,9 @@
                     <div class="map">
                         <img src="img/map.jpg" width="560" height="222" alt="Офис находится по адресу улица Строителей 15, Москва">
                     </div>
-                    <a class="btn btn-message" href="#">Напишите нам</a>
+                    <a class="btn message-btn" href="#">Напишите нам</a>
                 </section>
+            </div>
             </div>
         </main>
             
@@ -259,7 +286,7 @@
                     </a>
                     <ul class="footer-user-action">
                         <li><a class="login-link" href="info.html">Войти</a></li>
-                        <li><a class="compare-product" href="#">Сравнить</a></li>
+                        <li><a class="compare-goods" href="#">Сравнить</a></li>
                         <li><a class="user-cart" href="#">Корзина</a></li>
                     </ul>
                 </div>
