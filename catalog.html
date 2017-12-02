@@ -24,34 +24,30 @@
                                 <li><a class="login-link" href="info.html">Валентин Петухов</a></li>
                                 <li><a class="login-exit" href="#">Выйти</a></li>
                             </div>
-                            <div class="goods-block">
+                            <div class="product-block">
                                 <li><a class="compare-goods" href="#">Сравнить</a></li>
                                 <li><a class="user-cart" href="#">Корзина</a></li>
                             </div>
                         </ul>
                     </div>
                     <nav class="main-nav">
-                        <ul class="desktop-menu">
-                            <li class="menu-item">
-                                <div class="one-part-nav">
-                                    <a class="menu-item open-submenu" href="#">Каталог товаров</a>
-                                    <ul class="submenu-catalog">
-                                        <li><a href="#">Виртуальная реальность</a></li>
-                                        <li><a href="#">Моноподы для селфи</a></li>
-                                        <li><a href="#">Экшн-камеры</a></li>
-                                        <li><a href="#">Финтес-браслеты</a></li>
-                                        <li><a href="#">Умные часы</a></li>
-                                        <li><a href="#">Квадрокоптеры</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <div class="two-part-nav">
-                                <div class="services-block">
-                                    <li><a class="menu-item" href="#">Доставка</a></li>
-                                    <li><a class="menu-item" href="#">Гарантия</a></li>
-                                </div>
-                                <li><a class="menu-item" href="#">Контакты</a></li>
+                        <div class="catalog-nav">
+                            <a class="menu-item open-catalog" href="#">Каталог товаров</a>
+                            <ul class="submenu-catalog">
+                                <li><a href="virtual.html">Виртуальная реальность</a></li>
+                                <li><a href="bracelets.html">Фитнесс-браслеты</a></li>
+                                <li><a href="cameras.html">Квадрокоптеры</a></li>
+                                <li><a href="monopods.html">Моноподы для селфи</a></li>
+                                <li><a href="clocks.html">Умные часы</a></li>
+                                <li><a href="cameras.html">Экшн-камеры</a></li>       
+                            </ul>
+                        </div>
+                        <ul class="services-nav">
+                            <div class="services-block">
+                                <li><a class="menu-item" href="#">Доставка</a></li>
+                                <li><a class="menu-item" href="#">Гарантия</a></li>
                             </div>
+                            <li><a class="menu-item contacts" href="#">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -92,13 +88,25 @@
                         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
                             <fieldset class="filter-price">
                                 <legend>Стоимость</legend>
-                                <input type="range" id="price-range">
+                                <div class="range-filter">
+                                    <div class="range-controls">
+                                        <div class="scale">
+                                        <div class="bar" style="margin-left: 0; width: 60%"></div></div>
+                                        <div class="toggle toggle-min"></div>
+                                        <div class="toggle toggle-max"></div>
+                                        <div class="price-controls">
+                                            <span class="min-price">от 0</span>
+                                            <span class="max-price">до 5000</span>
+                                        </div>
+                                    </div>
+                                    <div class="price-controls"></div>
+                                </div>
                             </fieldset>
                             <fieldset class="filter-color">
                                 <legend>Цвет</legend>
                                     <ul>
                                         <li class="filter-option">
-                                            <input class="visUally-hidden filter-input filter-input-checkbox" id="filter-black" type="checkbox" name="black" checked disabled>
+                                            <input class="visually-hidden filter-input filter-input-checkbox" id="filter-black" type="checkbox" name="black" checked disabled>
                                             <label for="filter-black">Черный</label>
                                         </li>
                                         <li class="filter-option">
@@ -213,7 +221,7 @@
         <footer class="main-footer">
             <div class="container">
                 <div class="footer-wrapper">
-                    <a class="index-logo footer-logo">
+                    <a class="logo footer-logo">
                         <img src="img/logo-footer.svg" width="163" height="36" alt="Логотип Device">
                     </a>
                     <ul class="footer-user-action">
@@ -221,8 +229,6 @@
                         <li><a class="compare-goods" href="#">Сравнить</a></li>
                         <li><a class="user-cart" href="#">Корзина</a></li>
                     </ul>
-                </div>
-                <div class="footer-wrapper">
                     <p class="footer-contacts">
                         <span>г. Москва, ул. Строителей, 15</span>
                     </p>
@@ -236,11 +242,6 @@
                     <p class="footer-contacts">
                         <span>Тел.: +7 (495) 495-95-95</span>
                     </p>
-                </div>
-                <div class="footer-wrapper">
-                    <div>
-                        <span class="footer-decoration-line"></span>
-                    </div>
                     <div class="footer-social">
                         <ul>
                             <li>
