@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: "Gilroy";
+    font-family: "Gilroy ExtraBold";
     src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"),
         url("../fonts/gilroyextrabold.woff2") format("woff2"),
         url("../fonts/gilroyextrabold.woff") format("woff");
@@ -122,7 +122,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header-wrapper {
-    padding: 37px 60px 37px 60px;
+    padding: 36px 60px;
     
     background-color: #f7e296;
 }
@@ -259,7 +259,7 @@ input[type="radio"].visually-hidden {
     line-height: 36px;
     
     text-decoration: none;
-    padding-left: 25px;
+    padding-left: 23px;
 }
 
 .header-user-action a:hover,
@@ -288,6 +288,10 @@ input[type="radio"].visually-hidden {
 
 .product-block li {
     margin-left: 40px;
+}
+
+.product-block li:first-child {
+    margin-left: 0;
 }
 
 .login-link:before {
@@ -369,10 +373,13 @@ input[type="radio"].visually-hidden {
 
 .catalog-nav {
     position: relative;
-    width: 540px;
+    width: 260px;
     
     margin: 0;
+    margin-right: 260px;
     padding: 0;
+    
+    cursor: pointer;
 }
 
 .open-catalog {
@@ -388,7 +395,7 @@ input[type="radio"].visually-hidden {
     
     position: absolute;
     top: 2px;
-    right: 0;
+    right: 7px;
     
     background: url("../img/navigation/plus.svg") 0 0 no-repeat;
     
@@ -396,7 +403,7 @@ input[type="radio"].visually-hidden {
     height: 16px;
 }
 
-.open-catalog:hover + .submenu-catalog {
+.catalog-nav:hover .submenu-catalog {
     display: block;
 }
 
@@ -404,7 +411,7 @@ input[type="radio"].visually-hidden {
     display: none;
     
     position: absolute;
-    top: 23.5px;
+    top: 22px;
     left: -60px;
     z-index: 999;
     
@@ -489,10 +496,7 @@ input[type="radio"].visually-hidden {
     background: linear-gradient(to bottom, #f7e296 129px, #ffffff 129px);
     min-height: 612px;
     
-    padding-top: 18px;
-    padding-bottom: 106px;
-    padding-right: 60px;
-    padding-left: 31px;
+    padding: 20px 60px 106px 31px;
 }
 
 .slider-list {
@@ -561,7 +565,7 @@ input[type="radio"].visually-hidden {
     content: "";
     
     position: absolute;
-    top: 38px;
+    top: 34px;
     
     width: 100px;
     height: 7px;
