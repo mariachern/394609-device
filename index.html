@@ -32,7 +32,7 @@
                     </div>
                     <nav class="main-nav">
                         <div class="catalog-nav">
-                            <a class="menu-item open-catalog" href="#">Каталог товаров</a>
+                            <a class="menu-item open-catalog" href="catalog.html">Каталог товаров</a>
                             <ul class="submenu-catalog">
                                 <li><a href="virtual.html">Виртуальная реальность</a></li>
                                 <li><a href="bracelets.html">Фитнесс-браслеты</a></li>
@@ -68,7 +68,7 @@
                 </div>
                 <ul class="slider-list">
                     <li class="slide" id="slide-1">
-                        <div class="img-wrapper">
+                        <div class="img-wrapper img-slide-1">
                             <img class="slide-img" src="img/slider-1.png" width="384" height="486" alt="Палка для селфи">
                         </div>
                         <div class="slide-item-info">
@@ -93,7 +93,7 @@
                         </div>
                     </li>
                     <li class="slide" id="slide-2">
-                        <div class="img-wrapper">
+                        <div class="img-wrapper img-slide-2">
                             <img class="slide-img" src="img/slider-2.png" width="345" height="485" alt="Фитес-браслет">
                         </div>
                         <div class="slide-item-info">
@@ -114,7 +114,7 @@
                         </div>
                     </li>
                     <li class="slide" id="slide-3">
-                        <div class="img-wrapper">
+                        <div class="img-wrapper img-slide-3">
                             <img class="slide-img" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
                         </div>
                         <div class="slide-item-info">
@@ -144,42 +144,42 @@
                 <h2 class="visually-hidden">Разделы каталога товаров</h2>
                 <ul class="list-sections">
                     <li class="catalog-section">
-                        <a class="section-name" href="#">
+                        <a class="section-name" href="virtual.html">
                         <p class="section-img-bg">
                             <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
                         </p>
                         Виртуальная реальность</a>
                     </li>
                     <li class="catalog-section">
-                        <a class="section-name" href="#">
-                        <p class="section-img-bg">
+                        <a class="section-name" href="monopods.html">
+                        <p class="section-img-bg monopods">
                             <img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
                         </p>
                         Моноподы для селфи</a>
                     </li>
                     <li class="catalog-section">
-                        <a class="section-name" href="#">
+                        <a class="section-name" href="cameras.html">
                         <p class="section-img-bg">
                             <img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
                         </p>
                         Экшн-камеры</a>
                     </li>
                     <li class="catalog-section">
-                        <a class="section-name" href="#">
+                        <a class="section-name" href="bracelets.html">
                         <p class="section-img-bg">
                             <img src="img/popular-4.svg" width="107" height="65" alt="Финтес-браслеты">
                         </p>
                         Финтес-браслеты</a>
                     </li>
                     <li class="catalog-section">
-                        <a class="section-name" href="#">
+                        <a class="section-name" href="clocks.html">
                         <p class="section-img-bg">
                             <img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
                         </p>
                         Умные часы</a>
                     </li>
                     <li class="catalog-section">
-                        <a class="section-name" href="#">
+                        <a class="section-name" href="cameras.html">
                         <p class="section-img-bg">
                             <img src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
                         </p>
@@ -197,8 +197,8 @@
                 <input class="visually-hidden" type="radio" id="service-2" name="toggle-1">
                 <input class="visually-hidden" type="radio" id="service-3" name="toggle-1">
                 <div class="slider-services-controls">
-                    <label class="btn btn-service" for="service-1">Доставка</label>
-                    <label class="btn btn-service" for="service-2">Гарантия</label>
+                    <label class="btn btn-service" for="service-1" id="delivery">Доставка</label>
+                    <label class="btn btn-service" for="service-2" id="warranty">Гарантия</label>
                     <label class="btn btn-service" for="service-3">Кредит</label>
                 </div>
                 <ul class="slider-services-list">
@@ -266,9 +266,11 @@
                     <h2>Контакты</h2>
                     <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
                     <div class="map">
-                        <img src="img/map.jpg" width="560" height="222" alt="Офис находится по адресу улица Строителей 15, Москва">
+                        <a class="open-map" href="#">
+                            <img src="img/map.jpg" width="560" height="222" alt="Офис находится по адресу улица Строителей 15, Москва">
+                        </a>
                     </div>
-                    <a class="btn message-btn" href="#">Напишите нам</a>
+                    <a class="btn btn-message" href="#">Напишите нам</a>
                 </section>
             </div>
             </div>
@@ -334,14 +336,14 @@
                     <input id="user-name"  type="text" name="user-name" placeholder="Представьтесь, пожалуйста">
                 </p>
                 <p class="message-item-form">
-                    <label for="user-email">Ваше e-mail:</label>
+                    <label for="user-email">Ваш e-mail:</label>
                     <input id="user-email" type="text" name="user-email"  placeholder="Для отправки ответа">
                 </p>
                 <p class="message-item-form message-area">
                     <label for="user-message">Текст письма:</label>
                     <textarea id="user-message" name="user-message" id="user-message" cols="93" rows="7" placeholder="В свободной форме"></textarea>
                 </p>
-                <button class="btn btn-message" type="submit">Отправить</button>
+                <button class="btn btn-message-submit" type="submit">Отправить</button>
             </form>
             <button class="modal-close" type="button" aria-label="Закрыть"></button>
         </section>
@@ -349,14 +351,14 @@
         <section class="modal modal-map">
             <h2 class="visually-hidden">Увеличенная карта</h2>
             <div class="map">
-                <img src="img/map-big.jpg" width="960" height="559" alt="Офис находится по адресу улица Строителей 15, Москва">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.11237494734!2d37.52742931573974!3d55.68703400453028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1512508305810" width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <p><img src="img/map-big.jpg" width="960" height="559" alt="Офис находится по адресу улица Строителей 15, Москва"></p>
             </div>
             <button class="modal-close" type="button" aria-label="Закрыть"></button>
         </section>
+        <script src="js/main.js"></script>
     </body>
 </html>
-
-<!--box-shadow: 0 10px 40px rgba(0, 0, 0, 0.75);-->
 
 
 
