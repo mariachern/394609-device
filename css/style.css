@@ -217,11 +217,14 @@ input[type="radio"].visually-hidden {
 .btn-search:hover {
     color: #ffffff;
     background-color: #000000;
+    border: 2px solid #000000;
 }
 
-.btn-search:focus {
-    color: rgba(255, 255, 255, 0.3);
-    background-color: #000000;
+.btn-search:active {
+    opacity: 1; 
+    outline: 0; 
+    color: rgba(255, 255, 255, 0.3); 
+    background-color: #000000; 
 }
 
 .search-form input:focus + .btn-search {
@@ -235,8 +238,11 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
     
     width: 500px;
-    
+}
+
+.header-user-action ul {
     list-style: none;
+    
     margin: 0;
     padding: 0;
 }
@@ -469,8 +475,13 @@ input[type="radio"].visually-hidden {
     
     margin: 0;
     padding: 0;
-    
+}
+
+.services-nav ul {
     list-style: none;
+    
+    margin: 0;
+    padding: 0;
 }
 
 .services-block {
@@ -484,7 +495,7 @@ input[type="radio"].visually-hidden {
     padding-right: 35px;
 }
 
-.services-block li:last-child {
+.services-block li:nth-child(2n) {
     padding-right: 0;
 }
 
@@ -518,6 +529,8 @@ input[type="radio"].visually-hidden {
 }
 
 .slide {
+    position: relative;
+    
     display: none;
 }
 
@@ -544,7 +557,8 @@ input[type="radio"].visually-hidden {
 }
 
 .slide-item-info {
-    width: 500px;
+    width: 505px;
+    margin-right: -5px;
 }
 
 .slide .slide-number {
@@ -577,6 +591,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: 22px;
     padding: 0;
     padding-top: 83px;
+    width: 505px;
 }
 
 .slide b:before {
@@ -592,16 +607,21 @@ input[type="radio"].visually-hidden {
 }
 
 .slide p {
+    position: relative;
     color: #464646;
     line-height: 30px;
     
     margin: 0;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
     padding: 0;
 }
 
+.slide p:last-of-type {
+    margin-bottom: 45px;
+}
+
 .slide-btn {
-    margin-bottom: 47px;
+    margin-bottom: 50px;
 }
 
 .slide-table {
@@ -617,12 +637,17 @@ input[type="radio"].visually-hidden {
     padding-right: 0;
 }
 
+.slide:nth-of-type(3) td {
+    padding-right: 59px;
+}
+
 .slide th {
     font: inherit;
     font-size: 13px;
     line-height: 20px;
     letter-spacing: 0.13px;
     color: #464646;
+    text-align: left;
 }
 
 .slide tr {
@@ -636,10 +661,12 @@ input[type="radio"].visually-hidden {
 .slider-controls {
     position: absolute;
     z-index: 10;
-    top: 328px;
+    bottom: 228px;
     right: 82px;
     
     font-size: 0;
+    
+    height: 40px;
 }
 
 .slider-controls-item {
@@ -672,7 +699,8 @@ input[type="radio"].visually-hidden {
 
 .list-sections {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     
     margin: 0;
     padding: 0;
@@ -714,6 +742,11 @@ input[type="radio"].visually-hidden {
 
 .catalog-section {
     width: 160px;
+    margin-right: 40px;
+}
+
+.catalog-section:nth-of-type(6n){
+    margin-right: 0;
 }
 
 .catalog-section:hover .section-img-bg,
@@ -880,11 +913,21 @@ input[type="radio"].visually-hidden {
 
 .producers-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     
     list-style: none;
     margin: 0;
     padding: 95px 0 93px;
+}
+
+.producers-list li:nth-child(4n),
+.producers-list li:last-child {
+    margin-right: 0px;
+}
+
+.producer-logo {
+    margin-right: 40px;
 }
 
 .producer-logo a {
@@ -1098,6 +1141,19 @@ input[type="radio"].visually-hidden {
     opacity: 0.3;
 }
 
+/*Анимация для открытия modal-message */
+
+@keyframes zoom-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .modal-message {
     display: none;
     
@@ -1107,11 +1163,13 @@ input[type="radio"].visually-hidden {
     margin-top: -276px;
     margin-left: -480px;
     padding: 95px 100px 78px;
-    
+
     box-shadow: 0px -5px 40px -20px rgba(0, 0, 0, 0.3), 
                 0px 20px 40px -10px rgba(0, 0, 0, 0.2),
                 55px 0px 70px -60px rgba(0, 0, 0, 0.75),
                 -55px 0px 70px -60px rgba(0, 0, 0, 0.75);
+    
+    animation: zoom-in 0.7s;
 }
 
 .message-form {
@@ -1133,8 +1191,7 @@ input[type="radio"].visually-hidden {
     padding: 16px 20px;
 }
 
-.message-form input,
-.message-form textarea {
+.form-input {
     font-family: inherit;
     font-size: 14px;
     color: rgba(70, 70, 70, 0.4);
@@ -1145,23 +1202,23 @@ input[type="radio"].visually-hidden {
     border: 2px solid transparent;
     
     margin-top: 10px;
+    
+    outline: none;
 }
 
-.message-form input:hover,
-.message-form textarea:hover {
+.form-input:hover {
     background-color: #eaeaea;
 }
 
-.message-form input:focus,
-.message-form textarea:focus {
+.form-input:focus {
     background-color: transparent;
     border: 2px solid #faebb8;
     color: #464646;
 }
 
-.message-form input:invalid {
-    background-color: rgba(237, 181, 181, 0.5);
-    border: 2px solid #faebb8;
+.invalid-item {
+    background-color: rgba(237, 181, 181, 0.4);
+    border: 2px solid transparent;
 }
 
 .message-item-form {
@@ -1498,6 +1555,11 @@ input[type="radio"].visually-hidden {
     cursor: pointer;
 }
 
+.range-controls .toggle:active {
+    width: 22px;
+    height: 22px;
+}
+
 .range-controls .toggle-min {
   left: -8px;
 }
@@ -1591,7 +1653,8 @@ input[type="radio"].visually-hidden {
 
 .filter-input:focus + label:before,
 .filter-input:focus + label:after {
-    opacity: 0.6;
+    outline: thin dotted; 
+    outline: 5px auto -webkit-focus-ring-color;
 }
 
 /*Блокированный чекбокс*/
@@ -1659,7 +1722,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-list li:nth-last-of-type(-n+2) {
-    margin-bottom: 40px;
+    margin-bottom: px;
 }
 
 .item-name {
@@ -1695,6 +1758,10 @@ input[type="radio"].visually-hidden {
     margin: 0;
     margin-bottom: 35px;
     padding: 0;
+}
+
+.catalog-item-img img {
+    vertical-align: bottom;
 }
 
 .catalog-item-price {
@@ -1811,11 +1878,24 @@ input[type="radio"].visually-hidden {
     margin-left: 72px;
 }
 
-.page-number-wrapper {
+.page-number {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     
-    width: 85px;
+    width: 360px;
+    
+    list-style: none;
+    
+    margin: 0;
+    padding: 0;
+}
+
+.page-number li {
+    margin-right: 27px;
+}
+
+.page-number li:last-child {
+    margin-right: 0;
 }
 
 .pagination-list a {
@@ -1858,6 +1938,10 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-item a:active { 
+    opacity: 1;
+}
+
+.pagination-item.current a {
     opacity: 1;
 }
 
@@ -2024,10 +2108,10 @@ input[type="radio"].visually-hidden {
     opacity: 0.3;
 }
 
-.footer-social ul {
+.footer-social {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     
     width: 140px;
     
@@ -2036,6 +2120,15 @@ input[type="radio"].visually-hidden {
     padding: 0;
     
     list-style: none;
+}
+
+.footer-social li {
+    margin-right: 22px;
+}
+
+.footer-social li:nth-child(3n),
+.footer-social li:last-child {
+    margin-right: 0;
 }
 
 .social-btn {
