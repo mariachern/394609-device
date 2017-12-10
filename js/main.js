@@ -8,9 +8,6 @@ var userMessage = popup.querySelector("[name=user-message]");
 
 var storageUserName = localStorage.getItem("userName");
 var storageUserEmail = localStorage.getItem("userEmail");
-
-console.log(localStorage.getItem("userName"));
-console.log(localStorage.getItem("userEmail"));
   
 open.addEventListener("click", function(evt) {
     evt.preventDefault();
@@ -25,7 +22,7 @@ open.addEventListener("click", function(evt) {
     } else {
         userName.focus();
     }
-  });
+});
 
 form.addEventListener("submit", function(evt) {
     if (!userName.value) {
@@ -35,7 +32,7 @@ form.addEventListener("submit", function(evt) {
     else {
       localStorage.setItem("userName", userName.value);
     }
-  });
+});
 
 form.addEventListener("submit", function(evt) {
     if (!userEmail.value) {
@@ -45,22 +42,31 @@ form.addEventListener("submit", function(evt) {
     else {
       localStorage.setItem("userEmail", userEmail.value);
     }
-  });
+});
 
 form.addEventListener("submit", function(evt) {
     if (!userMessage.value) {
         evt.preventDefault();
         userMessage.classList.add("invalid-item");
     }
-  });
+});
+
+form.addEventListener("submit", function(evt) {
+    if (!userName.value || !userEmail.value || !userMessage.value) {
+        evt.preventDefault();
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
+    }
+});
 
 close.addEventListener("click", function(evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
     userName.classList.remove("invalid-item");
     userEmail.classList.remove("invalid-item");
-    userMessage.classList.remove("invalid-item");
-  });
+    popup.classList.remove("modal-error");
+});
 
 window.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
@@ -80,12 +86,12 @@ var closeMap = popupMap.querySelector(".modal-close");
 openMap.addEventListener("click", function(evt) {
     evt.preventDefault();
     popupMap.classList.add("modal-show");
-})
+});
 
 closeMap.addEventListener("click", function(evt) {
     evt.preventDefault();
     popupMap.classList.remove("modal-show");
-})
+});
 
 window.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 27) {
