@@ -82,10 +82,11 @@ input[type="radio"].visually-hidden {
 }
 
 .btn {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
     
     font-family: "Gilroy ExtraBold", "Arial Black", sans-serif;
     font-size: 18px;
@@ -96,14 +97,29 @@ input[type="radio"].visually-hidden {
     text-transform: uppercase;
     text-decoration: none;
     
-    background: linear-gradient(to bottom, transparent 0px, transparent 16px, 
-        #f0c52e 16px, #f0c52e 24px, transparent 24px, transparent 40px);
+    background-color: transparent;
     border: none;
     
     cursor: pointer;
+     
+    height: initial;
+    min-height: 40px;
     
-    width: 220px;
-    height: 40px;
+    padding: 10px 10px;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 50%;
+    left: 0;
+    margin-top: -4px;
+    
+    width: 100%;
+    height: 8px;
+    
+    background-color: #f0c52e;
 }
 
 .btn:hover,
@@ -634,6 +650,8 @@ input[type="radio"].visually-hidden {
 
 .slide-btn {
     margin-bottom: 50px;
+    
+    min-width: 220px;
 }
 
 .slide-table {
@@ -777,6 +795,8 @@ li.catalog-section {
 }
 
 .slider-services {
+    position: relative;
+    z-index: 0;
     min-height: 388px;
     
     background: linear-gradient(to bottom, #ffffff 100px, #e5e5e5 100px);
@@ -886,7 +906,8 @@ li.catalog-section {
 }
 
 .btn-service {
-    width: 160px;
+    min-width: 160px;
+    max-width: 283px;
     
     margin-bottom: 25px;
 }
@@ -898,11 +919,11 @@ li.catalog-section {
 #service-1:checked ~ .slider-services-controls .btn-service:nth-of-type(1),
 #service-2:checked ~ .slider-services-controls .btn-service:nth-of-type(2),
 #service-3:checked ~ .slider-services-controls .btn-service:nth-of-type(3) {
-    justify-content: flex-start;
-    
+    text-align: left;
+
     color: #f7e184;
     background: #000000;
-    width: 283px;
+    min-width: 283px;
 }
 
 #service-1:checked ~ .slider-services-controls .btn-service:nth-of-type(1) {
@@ -1093,7 +1114,7 @@ li.catalog-section {
     position: absolute;
     bottom: 83px;
     
-    width: 260px;
+    min-width: 260px;
 }
 
 .modal {
@@ -1254,7 +1275,7 @@ li.catalog-section {
 }
 
 .btn-message-submit {
-    width: 200px;
+    min-width: 200px;
 }
 
 .modal-map {
@@ -1484,6 +1505,8 @@ li.catalog-section {
 }
 
 .catalog-content {
+    position: relative;
+    z-index: 0;
     width: 100%;
     overflow: hidden; 
     
@@ -1492,6 +1515,8 @@ li.catalog-section {
 }
 
 .catalog-filters {
+    position: relatve;
+    z-index: 0;
     background-color: #efefef;
         
     width: 268px;
@@ -1719,8 +1744,10 @@ li.catalog-section {
 }
 
 .btn-filter {
-    width: 200px;
+    min-width: 200px;
     margin-left: -1px;
+    
+    background-color: transparent;
 }
 
 .catalog-sort a {
@@ -1776,7 +1803,7 @@ li.catalog-section {
 }
 
 .catalog-list li:nth-last-of-type(-n+2) {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .item-name {
@@ -1890,7 +1917,7 @@ li.catalog-section {
     position: relative;
     margin-top: 50px;
     
-    width: 200px;
+    min-width: 200px;
 }
 
 .btn-to-compare {
@@ -1970,7 +1997,7 @@ li.catalog-section {
     justify-content: center;
     align-items: center;
     
-    width: 126px;
+    min-width: 126px;
     height: inherit;
     
     cursor: pointer;
@@ -2120,8 +2147,6 @@ li.catalog-section {
     color: #ffffff;
     line-height: 30px;
     
-    width: 360px;
-    
     margin: 0;
     margin-bottom: 63px;
     padding: 0;
@@ -2135,14 +2160,18 @@ li.catalog-section {
 .footer-menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     
-    width: 430px;
+    min-width: 430px;
     
     list-style: none;
     padding: 0;
     padding-top: 10px;
     margin: 0;
+}
+
+.footer-menu li {
+    padding-right: 35px;
 }
 
 .footer-menu a {
