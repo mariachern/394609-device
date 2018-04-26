@@ -37,7 +37,7 @@
                                 <li><a href="cameras.html">Квадрокоптеры</a></li>
                                 <li><a href="monopods.html">Моноподы для селфи</a></li>
                                 <li><a href="clocks.html">Умные часы</a></li>
-                                <li><a href="cameras.html">Экшн-камеры</a></li>       
+                                <li><a href="cameras.html">Экшн-камеры</a></li>
                             </ul>
                         </div>
                         <div class="services-nav">
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </header>
-        
+
         <main class="catalog-main">
             <div class="container">
                 <h1 class="page-title ">Моноподы для селфи</h1>
@@ -63,7 +63,7 @@
                     <li class="breadcrumbs-current">Монополы для селфи</li>
                 </ul>
             </div>
-            
+
             <section class="catalog-titles">
                 <div class="container">
                     <h3 class="filter-title">Фильтр:</h3>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <section class="catalog-content">
                 <div class="container">
                     <div class="catalog-filters">
@@ -91,15 +91,14 @@
                                 <div class="range-filter">
                                     <div class="range-controls">
                                         <div class="scale">
-                                        <div class="bar" style="margin-left: 0; width: 60%"></div></div>
-                                        <a class="toggle toggle-min"></a>
-                                        <a class="toggle toggle-max"></a>
+                                        <div class="bar"></div></div>
+                                        <button class="toggle toggle-min" type="button" aria-valuemax="10000" aria-valuemin="0" role="slider" aria-label="Минимальная цена" ></button>
+                                        <button class="toggle toggle-max" type="button" aria-valuemax="10000" aria-valuemin="0" role="slider" aria-label="Максимальная цена" ></button>
                                         <div class="price-controls">
-                                            <span class="min-price">от 0</span>
-                                            <span class="max-price">до 5000</span>
+                                            <span>от<span class="min-price"> 0</span></span>
+                                            <span>до<span class="max-price"> 5800</span></span>
                                         </div>
                                     </div>
-                                    <div class="price-controls"></div>
                                 </div>
                             </fieldset>
                             <fieldset class="filter-color">
@@ -217,7 +216,7 @@
                 </div>
             </section>
         </main>
-            
+
         <footer class="main-footer">
             <div class="container">
                 <div class="footer-wrapper">
@@ -265,5 +264,7 @@
                 </div>
             </div>
         </footer>
+        <script src="js/utils.js"></script>
+        <script src="js/filter.js"></script>
     </body>
 </html>

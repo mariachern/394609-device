@@ -1241,6 +1241,7 @@ li.catalog-section {
     color: #464646;
 }
 
+
 .invalid-item {
     background-color: rgba(237, 181, 181, 0.4);
     border: 2px solid transparent;
@@ -1613,6 +1614,9 @@ li.catalog-section {
 }
 
 .range-controls .bar {
+    position: absolute;
+    left: 0;
+
     width: 60%;
     height: 2px;
 
@@ -1643,7 +1647,7 @@ li.catalog-section {
 }
 
 .range-controls .toggle-min {
-  left: -6px;
+  left: -10px;
 }
 
 .range-controls .toggle-max {
@@ -1652,10 +1656,6 @@ li.catalog-section {
 
 .price-controls {
     color: rgba(0, 0, 0, 0.25);
-}
-
-.price-controls .max-price {
-    margin-left: 58px;
 }
 
 .filter-option label {
